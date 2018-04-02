@@ -1,0 +1,32 @@
+/*
+ Project Name: Workshop
+ Author: Edgaras Jovaisa
+ Version: 0.0.1
+*/
+
+// configuration
+@import "../variables";
+// font Awesome
+// @import "../../vendor/components-font-awesome/scss/font-awesome";
+// normalize
+@import "../../node_modules/normalize-css/normalize.css";
+// bourbon
+// @import "../../vendor/bourbon/app/assets/stylesheets/bourbon";
+// @import "../../vendor/neat/app/assets/stylesheets/neat";
+// general styles
+@import "../general";
+// custom mixins
+// base layout
+// @import "../typography";
+// @import "../layout";
+// some useful stuff
+@import "../helpers";
+// elements
+
+// components
+
+// page components
+// @import "../pages/components/header";
+// @import "../pages/components/footer";
+// custom pages
+@import "../pages/index";
