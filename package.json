@@ -19,5 +19,7 @@
     "grunt-sass": "^2.1.0",
     "normalize.css": "^8.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "npm": "^5.8.0"
+  }
 }
