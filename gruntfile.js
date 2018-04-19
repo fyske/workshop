@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         },
 
         postcss: {
-            autoprefixer: {
+            dist: {
                 options: {
                     map: true,
                     processors: [
@@ -79,6 +79,14 @@ module.exports = function(grunt) {
                 files: ['sass/**/*.scss'],
                 tasks: ['sass', 'postcss:dist']
             },
+            html: {
+                options: {
+                    livereload: true,
+                    spawn: true,
+                    interval: 5007
+                },
+                files: ['**/*.html']
+            },
             css: {
                 options: {
                     livereload: true,
@@ -106,7 +114,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['sass', 'cmq', 'postcss:autoprefixer', 'cssmin']);
-    grunt.registerTask('buildcss', ['sass', 'cmq', 'postcss:autoprefixer', 'cssmin']);
+    grunt.registerTask('build', ['sass', 'cmq', 'postcss:dist', 'cssmin']);
+    grunt.registerTask('buildcss', ['sass', 'cmq', 'postcss:dist', 'cssmin']);
 
 }
