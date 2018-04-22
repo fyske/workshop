@@ -1,17 +1,47 @@
 <!doctype html>
 <html lang="en">
-	<head>
-	    <meta charset="utf-8">
-	      <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <title>The HTML5, CSS workshop</title>
-	    <meta name="description" content="The HTML5, CSS, FLEXBOX GRID workshop">
-	    <link rel="stylesheet" href="build/css/main.css">
-	    <!--[if lt IE 9]>
-	    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-	  	<![endif]-->
-	  	<script src="http://localhost:35729/livereload.js?snipver=1"></script>
-	</head>
-	<body>
-		<h1>Martynas Testing</h1>
-	</body>
+    <head>
+        <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The HTML5, CSS workshop</title>
+        <meta name="description" content="The HTML5, CSS, FLEXBOX GRID workshop">
+        <link rel="stylesheet" href="build/css/main.css">
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+        <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+    </head>
+    <body>
+        <h1 id="test">Martynas Testing</h1>
+        <input id="symbolCount" type="number" placeholder="Type symbol count">
+        <button type="button" onclick="changeHtml()">Change HTML</button>
+        <div class="body-wrap">
+            <p>Text on the background</p>
+        </div>
+        <!-- <img src="https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg"> -->
+    </body>
+    <script>
+        function changeHtml() {
+            var symbolCount;
+
+            symbolCount = parseInt(document.getElementById("symbolCount").value);
+            if(symbolCount > 0) {
+                document.getElementById("test").innerHTML = generateText(symbolCount);
+            } else {
+                alert("Please type correct symbol count!")
+            }
+        }
+        function generateText(symbolCount) {
+            symbolCount = symbolCount || 10;
+            var text = "";
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for (var i = 0; i < symbolCount; i++) {
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            }
+
+            return text;
+        }
+        // setTimeout(changeHtml, 3000);
+    </script>
 </html>
