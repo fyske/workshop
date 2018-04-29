@@ -6,45 +6,23 @@
         <title>The HTML5, CSS workshop</title>
         <meta name="description" content="The HTML5, CSS, FLEXBOX GRID workshop">
         <link rel="stylesheet" href="build/css/main.css">
-        [if lt IE 9]>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- [if lt IE 9]>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-        [endif]
-        <script src="http://localhost:35729/livereload.js?snipver=1"></script>
-        <base href="https://www.youtube.com" target="_blank">
+        [endif] -->
+       <!--  <script src="http://localhost:35729/livereload.js?snipver=1"></script> -->
     </head>
     <body>
-         <h1 id="test">Martynas Testing</h1>
-        <input id="symbolCount" type="number" placeholder="Type symbol count">
-        <button type="button" onclick="changeHtml()">Change HTML</button> 
-        <div>
-            <p>this page is responsive so it is going to change when i resize it aint that amazing what technology can do these days</p>
-            <a href="https://www.youtube.com/watch?v=VopB3HnOJQQ">w2s</a>
-            <a href="https://www.youtube.com/watch?v=PC2nHislaWQ">JacksEPTICeYE</a>
-        </div>
-         <img src="https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg"> 
+   <div class="bgimg-1">
+   <div class="caption">
+   <span class="border">FULL PAGE</span><br>
+   <span class="border">BACKGROUND IMAGE</span>
+   </div>
+</div>
+<div id="foot">
+  <div class="foot-cont"> Contact us at:</div>
+  <div class="foot-copy" style="text-align: right;">CopyRight &copy Me</div>
+   </div>
+   <i class="fa fa-car"></i>
     </body>
-    <script>
-        function changeHtml() {
-            var symbolCount;
-
-            symbolCount = parseInt(document.getElementById("symbolCount").value);
-            if(symbolCount > 0) {
-                document.getElementById("test").innerHTML = generateText(symbolCount);
-            } else {
-                alert("Please type correct symbol count!")
-            }
-        }
-        function generateText(symbolCount) {
-            symbolCount = symbolCount || 10;
-            var text = "";
-            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-            for (var i = 0; i < symbolCount; i++) {
-                text += possible.charAt(Math.floor(Math.random() * possible.length));
-            }
-
-            return text;
-        }
-        // setTimeout(changeHtml, 3000);
-    </script>
 </html>
