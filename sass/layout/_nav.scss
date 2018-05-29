@@ -1,0 +1,96 @@
+/* navigation bar */
+nav ul{
+	list-style-type: none;
+	display: none;
+}
+nav ul a{
+display: block;
+background:url("../../images/gym-nav-ul.jpg") center/cover fixed no-repeat;
+padding: 20px;
+font-size: 17px;
+text-decoration: none;
+text-transform: uppercase;
+color:white;
+transition: color 2s ease, background-color 2s ease, padding 2s ease;
+}
+nav ul a:hover{
+background: black;
+color: red;
+padding-left: 30px;
+}
+.nav-container img{
+	width:180px;
+	align-self: center;
+}
+.nav-container{
+	padding: 0 20px ;
+	background: rgb(129,129,129);
+	border: 3px solid red;
+	display: flex;
+	justify-content:space-between;
+}
+.bar{
+	width: 30px;	
+	height: 3px;
+	margin: 7px;
+	background: #ad343e;
+}
+.btn{
+	padding: 2px;
+	display: inline-block;
+	border: 2px solid #ad343e;
+}
+/*HEADER*/
+header{
+	min-height: 100vh;	
+	background:url("../../images/gym-header.png")center/cover fixed no-repeat;
+	display: flex;
+	flex-direction:column;
+	}
+
+nav{
+	flex:0 0 auto;
+}
+.banner{
+	flex:1 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	text-align: center;
+}
+.banner h1{
+	font-size: 50px;
+	text-transform: uppercase;
+	color: #4F646F;
+}
+.banner h3{
+	text-transform: capitalize;
+	font-size: 30px;
+	color: #2A3235;
+}
+.and{
+	color: #f5f3f5;
+}
+.banner-icons{
+	padding: 20px;
+}
+.banner-icons a{
+	display: inline-block;
+	font-size: 30px;
+	background: #474747;
+	padding: 5px 10px;
+	margin:0 10px;
+	border-radius: 50%;
+	color: #f5f3f5;
+	transition:color 1s ease, transforme 1s ease ;
+
+}
+.banner-icons a:hover{
+	color: black;
+	transform:translateY(-10px)
+}
+nav{
+position: fixed;
+width: 100%;
+z-index: 10px;
+}

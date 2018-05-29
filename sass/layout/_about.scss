@@ -1,0 +1,36 @@
+/* about */
+.about{
+	min-height: 100vh;
+	padding: 100px 0;
+	background: url("../../images/filler.jpeg")center/cover fixed no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+.about-card{
+	background: rgba(255,255,255,0.6);
+	text-align: center;
+	padding: 60px 40px;
+}
+.about-card h3{
+	text-transform: capitalize;
+	font-size: 40px;
+}
+.about-card .fa-car{
+	font-size: 60px;
+	color: #ad347e;
+	margin: 20px 0;
+}
+.about-card p{
+	line-height: 2;
+}
+@media only screen and (min-width: 776px){
+	.about-card{
+		max-width: 50%;
+		border-radius: 30px;
+	}
+	.about-card p{
+		max-width: 70%;
+		margin: 0 auto;
+	}
+}
