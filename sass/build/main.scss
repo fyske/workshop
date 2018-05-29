@@ -26,7 +26,12 @@
 // custom mixins
 // base layout
 // @import "../typography";
-// @import "../layout";
+// layout
+ @import "../layout/nav";
+ @import "../layout/services";
+ @import "../layout/projects";
+ @import "../layout/about";
+ @import "../layout/filler";
 // some useful stuff
 @import "../helpers";
 // elements
@@ -34,8 +39,8 @@
 // components
 
 // page components
-// @import "../pages/components/header";
-// @import "../pages/components/footer";
+ //@import "../pages/components/header";
+ //@import "../pages/components/footer";
 // custom pages
 @import "../pages/index";
 
